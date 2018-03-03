@@ -565,6 +565,7 @@ $font-small: 14px;
     text-align: left;
     text-indent: 5px;
     width: calc(50% + 4px);
+    overflow: hidden;
 
     @include device($phone) {
       text-indent: 0;
@@ -697,6 +698,7 @@ $font-small: 14px;
         padding-left: 0;
         padding-right: 0;
         appearance: none;
+        overflow: hidden;
 
         &:after {
           background: transparent url('ic-arrow-right-green.regular.svg') no-repeat center / 8px;
