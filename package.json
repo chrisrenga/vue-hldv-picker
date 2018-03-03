@@ -1,6 +1,6 @@
 {
   "name": "vue-hldv-picker",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "customisation of krystalcampioni/vue-hotel-datepicker",
   "author": "chrisrenga <chris@chrisrenga.com>",
   "license": "MIT",
@@ -18,8 +18,7 @@
     "type": "git",
     "url": "https://github.com/chrisrenga/vue-hldv-picker"
   },
-  "keywords": [
-  ],
+  "keywords": [],
   "bugs": {
     "url": "https://github.com/chrisrenga/vue-hldv-picker/issues"
   },
