@@ -4,7 +4,7 @@
   "description": "customisation of krystalcampioni/vue-hotel-datepicker",
   "author": "chrisrenga <chris@chrisrenga.com>",
   "license": "MIT",
-  "main": "dist/vue-hotel-datepicker.min.js",
+  "main": "dist/vue-hldv-picker.min.js",
   "files": [
     "dist"
   ],
