@@ -431,11 +431,11 @@ export default {
 /* =============================================================
  * RESPONSIVE LAYOUT HELPERS
  * ============================================================*/
-$tablet: '(min-width: 30em) and (max-width: 49em)';
+$tablet: '(min-width: 30em) and (max-width: 56em)';
 $phone: '(max-width: 30em)';
-$desktop: '(min-width: 49em)';
+$desktop: '(min-width: 56em)';
 $tablet-up: '(min-width: 30em)';
-$up-to-tablet: '(max-width: 49em)';
+$up-to-tablet: '(max-width: 56em)';
 $extra-small-screen: '(max-width: 23em)';
 
 @mixin device($device-widths) {
