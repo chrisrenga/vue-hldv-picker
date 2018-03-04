@@ -6,7 +6,8 @@
   "license": "MIT",
   "main": "dist/vue-hldv-picker.min.js",
   "files": [
-    "dist"
+    "dist",
+    "src/scss"
   ],
   "scripts": {
     "dev": "webpack-dev-server --inline --hot --open --config build/webpack.dev.conf.js",
