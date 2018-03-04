@@ -62,16 +62,27 @@
               )
         div(v-if='screenSize !== "desktop" && isOpen')
           .datepicker__week-row
-            .datepicker__week-name(v-for='dayName in this.i18n["day-names"]' v-text='dayName')
+            .datepicker__week-name(
+              v-for='dayName in this.i18n["day-names"]' 
+              v-text='dayName'
+            )
           .datepicker__months#swiperWrapper
-            div.datepicker__month(v-for='(a, n) in months' v-bind:key='n')
-              h1.datepicker__month-name(v-text='getMonth(months[n].days[15].date)')
+            div.datepicker__month(
+              v-for='(a, n) in months' 
+              v-bind:key='n'
+            )
+              h1.datepicker__month-name(
+                v-text='getMonth(months[n].days[15].date)'
+              )
               .datepicker__week-row.-hide-up-to-tablet
-                .datepicker__week-name(v-for='dayName in i18n["day-names"]' v-text='dayName')
+                .datepicker__week-name(
+                  v-for='dayName in i18n["day-names"]' 
+                  v-text='dayName'
+                )
               .square(v-for='(day, index) in months[n].days'
                 @mouseover='hoveringDate = day.date'
                 v-bind:key='index'
-                )
+              )
                 Day(
                   :options="$props"
                   @dayClicked='handleDayClick($event)'
@@ -86,9 +97,10 @@
                   :checkIn='checkIn'
                   :checkOut='checkOut'
                 )
-            button.next--mobile(
-              @click='renderNextMonth' type="button"
-            )
+            div
+              button.next--mobile(
+                @click='renderNextMonth' type="button"
+              )
 </template>
 
 <script>
