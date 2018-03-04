@@ -86,7 +86,7 @@
                   :checkIn='checkIn'
                   :checkOut='checkOut'
                 )
-            button.datepicker__month-button.datepicker__month-button--next--mobile(
+            button.next--mobile(
               @click='renderNextMonth' type="button"
             )
 </template>
@@ -485,6 +485,33 @@ $font-small: 14px;
   position: absolute;
   z-index: 10;
 
+  button.next--mobile {
+    background: none;
+    border: 1px solid $light-gray;
+    float: none;
+    height: 50px;
+    width: 100%;
+    position: relative;
+    background-position: center;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+    appearance: none;
+    overflow: hidden;
+
+    &:after {
+      background: transparent url('ic-arrow-right-green.regular.svg') no-repeat center / 8px;
+      transform: rotate(90deg);
+      content: "";
+      position: absolute;
+      width: 200%;
+      height: 200%;
+      top: -50%;
+      left: -50%;
+    }
+  }  
+
   &--closed {
     box-shadow: 0 15px 30px 10px rgba($black, 0);
     max-height: 0;
@@ -687,32 +714,6 @@ $font-small: 14px;
 
     &--next {
       float: right;
-
-      &--mobile {
-        background: none;
-        border: 1px solid $light-gray;
-        float: none;
-        width: 100%;
-        position: relative;
-        background-position: center;
-        margin-left: 0;
-        margin-right: 0;
-        padding-left: 0;
-        padding-right: 0;
-        appearance: none;
-        overflow: hidden;
-
-        &:after {
-          background: transparent url('ic-arrow-right-green.regular.svg') no-repeat center / 8px;
-          transform: rotate(90deg);
-          content: "";
-          position: absolute;
-          width: 200%;
-          height: 200%;
-          top: -50%;
-          left: -50%;
-        }
-      }
     }
 
     &--locked {
