@@ -688,7 +688,7 @@ $font-small: 14px;
     &--next {
       float: right;
 
-      @include device($up-to-tablet) {
+      @include device($tablet) {
         background: none;
         border: 1px solid $light-gray;
         float: none;
