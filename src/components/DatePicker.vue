@@ -256,13 +256,13 @@ export default {
     handleWindowResize() {
       let screenSizeInEm = window.innerWidth / parseFloat(getComputedStyle(document.querySelector('body'))['font-size']);
 
-      if (screenSizeInEm < 31) {
+      if (screenSizeInEm < 35.43) {
         this.screenSize = 'smartphone';
       }
-      else if (screenSizeInEm > 30 && screenSizeInEm < 49) {
+      else if (screenSizeInEm > 34.28 && screenSizeInEm < 55) {
         this.screenSize = 'tablet';
       }
-      else if (screenSizeInEm > 48) {
+      else if (screenSizeInEm > 55) {
         this.screenSize = 'desktop';
       }
 
