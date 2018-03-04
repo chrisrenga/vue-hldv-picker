@@ -66,7 +66,7 @@
           .datepicker__months#swiperWrapper
             div.datepicker__month(v-for='(a, n) in months' v-bind:key='n')
               h1.datepicker__month-name(v-text='getMonth(months[n].days[15].date)')
-              .datepicker__week-row.-hide-up-to-tablet
+              .datepicker__week-row
                 .datepicker__week-name(v-for='dayName in i18n["day-names"]' v-text='dayName')
               .square(v-for='(day, index) in months[n].days'
                 @mouseover='hoveringDate = day.date'
