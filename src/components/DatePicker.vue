@@ -431,12 +431,12 @@ export default {
 /* =============================================================
  * RESPONSIVE LAYOUT HELPERS
  * ============================================================*/
-$tablet: '(min-width: 30em) and (max-width: 56em)';
-$phone: '(max-width: 30em)';
-$desktop: '(min-width: 56em)';
-$tablet-up: '(min-width: 30em)';
-$up-to-tablet: '(max-width: 56em)';
-$extra-small-screen: '(max-width: 23em)';
+$tablet: '(min-width: 480px) and (max-width: 784px)';
+$phone: '(max-width: 480px)';
+$desktop: '(min-width: 784px)';
+$tablet-up: '(min-width: 480px)';
+$up-to-tablet: '(max-width: 784px)';
+$extra-small-screen: '(max-width: 368px)';
 
 @mixin device($device-widths) {
   @media screen and #{$device-widths} { @content }
