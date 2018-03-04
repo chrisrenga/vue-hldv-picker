@@ -86,7 +86,7 @@
                   :checkIn='checkIn'
                   :checkOut='checkOut'
                 )
-            button.datepicker__month-button.datepicker__month-button--next.-hide-on-desktop(
+            button.datepicker__month-button.datepicker__month-button--next(
               @click='renderNextMonth' type="button"
             )
 </template>
