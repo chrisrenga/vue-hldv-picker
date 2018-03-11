@@ -69,8 +69,8 @@
         <h3>Certain dates blocked</h3>
         <DatePicker
           :disabledDates="[
-              '2017-09-14',
-              '2017-09-26',
+              '2018-03-14',
+              '2018-03-26',
           ]"
           :showCloseButton="true"
           />

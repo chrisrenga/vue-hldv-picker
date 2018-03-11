@@ -107,7 +107,7 @@
 import { directive as onClickOutside } from 'vue-on-click-outside';
 
 import fecha from 'fecha';
-import _ from 'lodash';
+// import _ from 'lodash';
 
 import Day from './Day.vue';
 import Helpers from './helpers.js';
@@ -347,13 +347,11 @@ export default {
       let firstDayOfLastMonth;
 
       if (this.screenSize !== 'desktop') {
-        firstDayOfLastMonth = _.filter(this.months[this.months.length-1].days, {
-          'belongsToThisMonth': true
-        });
+        firstDayOfLastMonth = this.months[this.months.length-1].days
+          .filter((day) => day.belongsToThisMonth === true);
       } else {
-        firstDayOfLastMonth = _.filter(this.months[this.activeMonthIndex+1].days, {
-          'belongsToThisMonth': true
-        });
+        firstDayOfLastMonth = this.months[this.activeMonthIndex+1].days
+          .filter((day) => day.belongsToThisMonth === true);
       }
 
       if (this.endDate !== Infinity){
