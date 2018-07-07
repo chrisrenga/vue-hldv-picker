@@ -63,12 +63,12 @@
         div(v-if='screenSize !== "desktop" && isOpen')
           .datepicker__week-row
             .datepicker__week-name(
-              v-for='dayName in this.i18n["day-names"]' 
+              v-for='dayName in this.i18n["day-names"]'
               v-text='dayName'
             )
           .datepicker__months#swiperWrapper
             div.datepicker__month(
-              v-for='(a, n) in months' 
+              v-for='(a, n) in months'
               v-bind:key='n'
             )
               h1.datepicker__month-name(
@@ -76,7 +76,7 @@
               )
               .datepicker__week-row.-hide-up-to-tablet
                 .datepicker__week-name(
-                  v-for='dayName in i18n["day-names"]' 
+                  v-for='dayName in i18n["day-names"]'
                   v-text='dayName'
                 )
               .square(v-for='(day, index) in months[n].days'
@@ -425,6 +425,20 @@ export default {
     this.onElementHeightChange(document.body, () => {
       this.emitHeighChangeEvent();
     });
+
+
+    fecha.i18n = {
+      dayNames: this.i18n['day-names'],
+      dayNamesShort: this.shortenString(this.i18n['day-names'], 3),
+      monthNames: this.i18n['month-names'],
+      monthNamesShort: this.shortenString(this.i18n['month-names'], 3),
+      amPm: ['am', 'pm'],
+       // D is the day of the month, function returns something like...  3rd or 11th
+      DoFn: function (D) {
+         return D + [ 'th', 'st', 'nd', 'rd' ][ D % 10 > 3 ? 0 : (D - D % 10 !== 10) * D % 10 ];
+      }
+    };
+
   },
 
   destroyed() {
@@ -520,7 +534,7 @@ $font-small: 14px;
       top: -50%;
       left: -50%;
     }
-  }  
+  }
 
   &--closed {
     box-shadow: 0 15px 30px 10px rgba($black, 0);

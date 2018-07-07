@@ -136,4 +136,12 @@ export default {
     this.xDown = null;
     this.yDown = null;
   },
+
+  shortenString(arr, sLen) {
+    let newArr = [];
+    for (let i = 0, len = arr.length; i < len; i++) {
+      newArr.push(arr[i].substr(0, sLen));
+    }
+    return newArr;
+  },
 };

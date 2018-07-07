@@ -101,6 +101,14 @@
           />
       </div>
 
+      <div class="box">
+         <h3>Custom date format with i18n (e.g.: pt-PT)</h3>
+         <DatePicker
+           format="MMMM D"
+           :i18n="ptPT"
+         />
+        </div>
+
     </div>
   </div>
 </template>
@@ -112,6 +120,16 @@ export default {
   components: {
     DatePicker
   },
+
+  data() {
+    return {
+      ptPT: {
+        night: 'Noite',
+        nights: 'Noites', 'day-names': ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab'], 'check-in': 'Chegada', 'check-out': 'Partida', 'month-names': ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+      }
+    };
+  },
+
 };
 
 </script>
