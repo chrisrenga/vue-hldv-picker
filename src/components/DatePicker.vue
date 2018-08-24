@@ -469,6 +469,9 @@ $extra-small-screen: '(max-width: 368px)';
 .square {
   width: calc(100% / 7);
   float: left;
+  @include device($desktop) {
+    cursor: pointer;
+  }
 }
 
 *,
